@@ -20,7 +20,7 @@ const HireMe = () => {
                                 <div className='flex md:flex-row flex-col justify-between mx-6 mt-4'>
                                     <div className='flex flex-col'>
                                         <label htmlFor="name">Name <span className='text-red-600'>*</span></label>
-                                        <input type="text" name="name" className='px-2 mt-2 w-64 py-1 border rounded border-gray-600 text-gray-800' />
+                                        <input type="text" name="name" className='px-2 mt-2 w-64 py-1 border rounded border-gray-600 text-gray-800' required />
                                     </div>
                                     <div className='flex flex-col md:mt-0 mt-4'>
                                         <label htmlFor="name">Company Name</label>
@@ -30,18 +30,18 @@ const HireMe = () => {
                                 <div className='flex md:flex-row flex-col justify-between mx-6 mt-4'>
                                     <div className='flex flex-col'>
                                         <label htmlFor="name">Contact Number <span className='text-red-600'>*</span></label>
-                                        <input type="text" name="name" className='px-2 mt-2 w-64 py-1 border rounded border-gray-600 text-gray-800' />
+                                        <input type="text" required name="name" className='px-2 mt-2 w-64 py-1 border rounded border-gray-600 text-gray-800' />
                                     </div>
                                     <div className='flex flex-col md:mt-0 mt-4'>
                                         <label htmlFor="name">Email <span className='text-red-600'>*</span></label>
-                                        <input type="email" name="name" className='px-2 mt-2 w-64 py-1 border rounded border-gray-600 text-gray-800' />
+                                        <input type="email" required name="name" className='px-2 mt-2 w-64 py-1 border rounded border-gray-600 text-gray-800' />
                                     </div>
                                 </div>
 
 
                                 <div className='flex flex-col mx-6 mt-4'>
-                                    <label for="underline_select" class="sr-only">Underline select </label>
-                                    <select id="underline_select" class="block w-64 lg:w-72 py-2.5 px-0 text-base text-gray-800 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                                    <label for="underline_select" className="sr-only">Underline select </label>
+                                    <select id="underline_select" className="block w-64 lg:w-72 py-2.5 px-0 text-base text-gray-800 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer" required>
                                         <option selected>Choose a country</option>
                                         <option value="US">United States</option>
                                         <option value="CA">Canada</option>
