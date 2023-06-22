@@ -7,9 +7,9 @@ const HireMe = () => {
             {/* <h1>Hire Us</h1> */}
             <section className='body-font text-gray-600 flex justify-center'>
                 <div className='lg:w-[90%] w-[100%] h-full px-5 py-6 flex justify-center items-center flex-col md:justify-start md:items-start'>
-                    <h1 className='text-4xl font-semibold tracking-wider text-purple-600 text-center md:text-start'>Hire Us</h1>
+                    <h1 className='text-4xl font-semibold tracking-wider text-purple-600 text-center md:text-start' id='hire_us'>Hire Us</h1>
                     <div className=' flex lg:justify-between lg:flex-row flex-col h-full my-8'>
-                        <div className='lg:w-1/2 w-[100%] mr-2 h-full flex justify-center items-center lg:justify-start'>
+                        <div className='lg:w-1/2 w-[100%] mr-2 h-full flex justify-center items-center lg:justify-start' >
                             <div className='w-[85%] lg:flex lg:justify-center items-center flex-col h-full ' >
                                 <h2 className='text-2xl py-5 text-center lg:text-start'>&quot;<span className='text-purple-700'>CodeVerse:</span> Elevate Your Digital Presence, Choose Excellence!&quot;</h2>
                                 <p className='py-5 text-center lg:text-start'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, molestiae. Consequuntur doloremque odio atque ab ipsam magnam repellendus, nobis beatae similique fuga iure veniam facere dolorem quisquam harum corporis esse quae officiis provident debitis aperiam! Fuga eligendi quidem rerum non eum impedit minima accusantium aspernatur!</p>

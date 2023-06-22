@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
     <FirstNavbar />
     <SecondNavbar />
     <Component {...pageProps} />
-    <Testimonial/>
+    {/* <Testimonial/> */}
     <Footer />
 
   </>

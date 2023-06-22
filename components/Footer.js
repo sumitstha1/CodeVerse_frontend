@@ -114,7 +114,7 @@ const Footer = () => {
             </div>
             <div className="flex bg-gray-900 p-3 flex-col text-center pt-5 space-y-8 md:flex-row md:justify-between md:space-y-0 w-full">
                 <div className="flex mx-3 justify-between space-x-20 md:flex-row text-gray-200 md:space-x-28 md:ml-20 lg:ml-24 lg:space-x-[13rem] xl:space-x-72 xl:ml-24">
-                    <p>Copyright &copy; 2023 <Link href={"/"}>CodeVerse</Link>. All Rights Reserved.</p>
+                    <p>Copyright &copy; 2023 <Link href={"/"} className='hover:text-purple-300'>CodeVerse</Link>. All Rights Reserved.</p>
                 </div>
                 <div className="md:flex flex-row justify-end items-center mr-20 mx-3 hidden text-white pb-4 text-center text-xl space-x-2 md:w-2/4 md:pb-0 md:pl-2 md:space-x-1 lg:pl-[171px] lg:space-x-2 xl:pl-44">
                     <Link href="#" className="w-8 h-8 bg-purple-500 hover:text-purple-500 flex flex-col rounded-full pt-[3px] hover:bg-gray-200 justify-center items-center">

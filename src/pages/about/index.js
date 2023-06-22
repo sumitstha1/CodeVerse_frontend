@@ -6,6 +6,7 @@ import OurValues from '../../../components/About/OurValues'
 import OurTeam2 from '../../../components/About/OurTeam2'
 import TestimonialSection from '../../../components/TestimonialSection'
 import MetaHead from '../../../components/Meta/MetaTagHeader'
+import OurWorkingModule from '../../../components/About/OurWorkingModule';
 
 const About = () => {
   return (
@@ -39,6 +40,7 @@ const About = () => {
           <OurValues />
           <OurTeam2 />
           {/* <TestimonialSection /> */}
+          <OurWorkingModule/>
         </div>
       </section>
     </>

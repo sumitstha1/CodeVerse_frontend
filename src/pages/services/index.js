@@ -2,6 +2,8 @@ import React from 'react'
 import MetaHead from '../../../components/Meta/MetaTagHeader';
 import Link from 'next/link';
 import Image from 'next/image';
+import { MdArrowForwardIos } from 'react-icons/md'
+import { BsArrowRight } from 'react-icons/bs'
 
 const ServiceSection = () => {
   const services = [
@@ -33,27 +35,44 @@ const ServiceSection = () => {
   ];
   return (
     <>
-      {services.map((e) => {
-        return (
-          <div key={e.id} className="p-4 lg:w-1/2 md:w-full">
-            <div className="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
-              <div className="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-purple-100 text-purple-500 flex-shrink-0">
-                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-8 h-8" viewBox="0 0 24 24">
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                </svg>
+      {services.map((e, index) => {
+        if (index % 2 == 0) {
+          return (
+            <div key={e.id} className='md:w-[80%] my-8 md:flex md:justify-between md:flex-row'>
+              <div className='md:w-1/2 md:flex md:justify-between md:items-center'>
+                <h1 className='text-2xl tracking-wider text-center font-bold text-purple-500 my-2 md:hidden'>{e.name}</h1>
+                <Image src={"/code.jpg"} alt='This is alt text' width={6000} height={4000} className='w-full md:w-[30vw] md:h-[35vh] rounded mt-2' />
               </div>
-              <div className="flex-grow">
-                <h2 className="text-gray-900 text-lg title-font font-medium mb-3">{e.name}</h2>
-                <p className="leading-relaxed text-base">{e.description.substr(0, 140)}...</p>
-                <a className="mt-3 text-purple-500 inline-flex items-center">Learn More
-                  <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
+              <div className='flex items-center md:items-start md:justify-center flex-col md:w-1/2'>
+                <h1 className='text-3xl tracking-wider font-bold text-purple-500 my-2 text hidden text-left md:block'>{e.name}</h1>
+                <p className='text-justify mt-2'>{e.description}</p>
+                <Link href={'#'} className='border border-purple-500 px-10 py-3 rounded text-purple-500 hover:bg-purple-500 hover:text-white transition ease-linear delay-75 duration-150 mt-4'>
+                  <div className='flex justify-center items-center'>
+                    Learn more <MdArrowForwardIos className='ml-2' />
+                  </div>
+                </Link>
               </div>
             </div>
-          </div>
-        )
+          )
+        } else {
+          return (
+            <div key={e.id} className='md:w-[80%] my-8 md:flex md:justify-between md:flex-row-reverse'>
+              <div className='md:w-1/2 md:flex md:justify-center md:items-center'>
+                <h1 className='text-2xl tracking-wider text-center font-bold text-purple-500 my-2 md:hidden'>{e.name}</h1>
+                <Image src={"/code.jpg"} alt='This is alt text' width={6000} height={4000} className='w-full md:w-[30vw] md:h-[35vh] rounded mt-2' />
+              </div>
+              <div className='flex items-center md:items-start md:justify-center flex-col md:w-1/2'>
+                <h1 className='text-3xl tracking-wider font-bold text-purple-500 my-2 text hidden text-left md:block'>{e.name}</h1>
+                <p className='text-justify mt-2'>{e.description}</p>
+                <Link href={'#'} className='border border-purple-500 px-10 py-3 rounded text-purple-500 hover:bg-purple-500 hover:text-white transition ease-linear delay-75 duration-150 mt-4'>
+                  <div className='flex justify-center items-center'>
+                    Learn more <MdArrowForwardIos className='ml-2' />
+                  </div>
+                </Link>
+              </div>
+            </div>
+          )
+        }
       })}
     </>
   )
@@ -74,48 +93,56 @@ const Services = () => {
       <section className="text-gray-600 body-font">
         <h1 className='text-4xl text-purple-600 tracking-wider font-bold px-5 text-center'>Services</h1>
         <p className='tracking-wide text-center mt-4'>We create stunning, user-friendly websites tailored to your business needs.</p>
-        <div className="container px-5 py-20 mx-auto flex flex-wrap">
-          <div className="flex flex-wrap -m-4 justify-center">
+        <div className="container px-5 py-16 mx-auto flex flex-wrap">
+          <div className='flex justify-center flex-col md:items-center'>
             <ServiceSection />
-            {/* <div className="p-4 lg:w-1/2 md:w-full">
-            <div className="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
-              <div className="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-purple-100 text-purple-500 flex-shrink-0">
-                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-8 h-8" viewBox="0 0 24 24">
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                </svg>
+
+            {/* <div className='md:w-[80%] my-8 md:flex md:justify-between md:flex-row'>
+              <div className='md:w-1/2 md:flex md:justify-between md:items-center'>
+                <h1 className='text-2xl tracking-wider text-center font-bold text-purple-500 my-2 md:hidden'>Deployment/Hosting</h1>
+                <Image src={"/code.jpg"} alt='This is alt text' width={6000} height={4000} className='w-full md:w-[30vw] md:h-[35vh] rounded mt-2' />
               </div>
-              <div className="flex-grow">
-                <h2 className="text-gray-900 text-lg title-font font-medium mb-3">FullStack Development</h2>
-                <p className="leading-relaxed text-base">We offer comprehensive full stack web development services using Django, REST Framework, React, and Next.js. With expertise...</p>
-                <a className="mt-3 text-purple-500 inline-flex items-center">Learn More
-                  <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="p-4 lg:w-1/2 md:w-full">
-            <div className="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
-              <div className="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-purple-100 text-purple-500 flex-shrink-0">
-                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10" viewBox="0 0 24 24">
-                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-              </div>
-              <div className="flex-grow">
-                <h2 className="text-gray-900 text-lg title-font font-medium mb-3">Backend Development</h2>
-                <p className="leading-relaxed text-base">We specialize in Django backend web development, offering tailored solutions for database design, authentication configuration, and admin panel development. With expertise...</p>
-                <a className="mt-3 text-purple-500 inline-flex items-center">Learn More
-                  <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
+              <div className='flex items-center md:items-start md:justify-center flex-col md:w-1/2'>
+                <h1 className='text-3xl tracking-wider font-bold text-purple-500 my-2 text hidden text-left md:block'>Deployment/Hosting</h1>
+                <p className='text-justify mt-2'>Experience hassle-free deployment and hosting services with CodeVerse. Our expert team ensures seamless deployment of your websites and applications, providing reliable and secure hosting solutions. Focus on your core business while we take care of the technicalities, ensuring optimal performance and uptime for your online presence. Trust CodeVerse for effortless deployment and hosting, allowing you to scale and grow your digital footprint with confidence.</p>
+                <Link href={'#'} className='border border-purple-500 px-6 py-3 rounded text-purple-500 hover:bg-purple-500 hover:text-white transition ease-linear delay-75 duration-150 mt-4'>
+                  <div className='flex justify-center items-center'>
+                    Learn more <MdArrowForwardIos className='ml-2' />
+                  </div>
+                </Link>
               </div>
             </div>
-          </div> */}
+            <div className='md:w-[80%] my-8 md:flex md:justify-between md:flex-row-reverse'>
+              <div className='md:w-1/2 md:flex md:justify-center md:items-center'>
+                <h1 className='text-2xl tracking-wider text-center font-bold text-purple-500 my-2 md:hidden'>Deployment/Hosting</h1>
+                <Image src={"/code.jpg"} alt='This is alt text' width={6000} height={4000} className='w-full md:w-[30vw] md:h-[35vh] rounded mt-2' />
+              </div>
+              <div className='flex items-center md:items-start md:justify-center flex-col md:w-1/2'>
+                <h1 className='text-3xl tracking-wider font-bold text-purple-500 my-2 text hidden text-left md:block'>Deployment/Hosting</h1>
+                <p className='text-justify mt-2'>Experience hassle-free deployment and hosting services with CodeVerse. Our expert team ensures seamless deployment of your websites and applications, providing reliable and secure hosting solutions. Focus on your core business while we take care of the technicalities, ensuring optimal performance and uptime for your online presence. Trust CodeVerse for effortless deployment and hosting, allowing you to scale and grow your digital footprint with confidence.</p>
+                <Link href={'#'} className='border border-purple-500 px-6 py-3 rounded text-purple-500 hover:bg-purple-500 hover:text-white transition ease-linear delay-75 duration-150 mt-4'>
+                  <div className='flex justify-center items-center'>
+                    Learn more <MdArrowForwardIos className='ml-2' />
+                  </div>
+                </Link>
+              </div>
+            </div> */}
+
+            <div className='w-full flex justify-center items-center'>
+              <Link
+                href="/#hire_us"
+                offset={-100}
+                className='px-16 border hover:border-purple-500 hover:text-purple-500 text-white hover:bg-transparent bg-purple-500 md:font-semibold md:text-lg py-2 cursor-pointer transition ease-linear rounded delay-75 duration-150 mt-5 '
+              >
+                <div className='flex justify-center items-center'>
+                  Hire us <BsArrowRight className='ml-2 relative '/>
+                </div>
+              </Link>
+            </div>
+
           </div>
-          <div class="flex justify-center">
+
+          <div class="flex justify-center mt-10">
             <div class="flex flex-col justify-center">
               <div class="flex flex-col md:flex-row max-w-7xl justify-center items-center ">
                 <div class="overflow-hidden w-full shadow-sm flex flex-col md:flex-row justify-center">
@@ -135,12 +162,13 @@ const Services = () => {
 
                       </div>
                     </div>
-                    
+
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          
         </div>
       </section>
     </>

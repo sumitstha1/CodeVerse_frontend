@@ -1,8 +1,16 @@
 import React from 'react'
 import Image from 'next/image'
 import { Typography } from '@mui/material'
+import { useRouter } from 'next/router'
 
 const ServiceSlug = () => {
+
+  const router = useRouter();
+
+  const { slug } = router.query;
+
+  console.log(slug)
+
   return (
     <>
       <section>
@@ -10,7 +18,7 @@ const ServiceSlug = () => {
           <Image src={"/scene.jpg"} width={3000} height={2000} alt='Banner Image' className='h-full' />
         </div>
         <div className='relative -top-32 md:left-10 text-slate-200 max-w-[100vw] w-full'>
-          <p className='md:text-xl text-base text-center w-full'>This is a banner title</p>
+          <p className='md:text-xl text-base w-full'>This is a banner title</p>
           <h1 className='md:text-4xl text-2xl'>This is a banner description and now its time to test</h1>
         </div>
       </section>
