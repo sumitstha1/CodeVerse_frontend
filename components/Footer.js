@@ -1,11 +1,67 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaViber, FaFacebookF, FaFacebookMessenger, FaInstagram } from 'react-icons/fa';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsChevronRight } from 'react-icons/bs';
+import notify from '../utils/notify';
+import { STATUSCODES } from '../Data/statusCodes';
 
 const Footer = () => {
+
+    const [service, setService] = useState([]);
+
+    const [email, setEmail] = useState('');
+    
+
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch(process.env.API_URL + '/service/');
+                const jsonData = await response.json();
+                setService(jsonData);
+            } catch (error) {
+                console.log('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    const handleChange = (e) => {
+        if (e.target.name == "email") {
+            setEmail(e.target.value)
+        }
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const data = { email }
+
+        try {
+            const response = await fetch(process.env.API_URL + "/account/newsletter/", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+            if (response.ok) {
+                notify("You have successfully subscribed to our newsletter😊!")
+                setEmail('')
+            } else {
+                notify(`${STATUSCODES[response.status]}, Please try again`, "error")
+                console.log("error")
+            }
+        }
+        catch (err) {
+            notify("An error occured. Please try again later.", "error")
+            console.log("error")
+        }
+    }
+
     return (
         <div className='w-[100vw]'>
             <div className=" flex items-center justify-around">
@@ -17,9 +73,9 @@ const Footer = () => {
                                 <p className="text-gray-500 font-medium text-base hover:text-purple-600 "> Boudha Street <br />
                                     Chabahil, Kathmandu <br /> Nepal </p> <br />
                                 <p className="text-gray-500 font-medium text-base hover:text-purple-600 cursor-pointer"> <strong
-                                    className="tracking-wide text-purple-600 font-normal">Phone:</strong> +977 9815980798 </p>
+                                    className="tracking-wide text-purple-600 font-normal">Phone:</strong> <Link href={"tel:+9779815980798"}>+977 9815980798</Link> </p>
                                 <p className="text-gray-500 font-medium text-base hover:text-purple-600 cursor-pointer"> <strong
-                                    className="tracking-wide text-purple-600 font-normal">Email:</strong> sumit.stha911@gmail.com </p>
+                                    className="tracking-wide text-purple-600 font-normal">Email:</strong> <Link href={"mailto:web.codeverse@gmail.com"}>web.codeverse@gmail.com</Link> </p>
                             </div>
                             <div className="leading-9 md:w-2/4 md:order-3 md:ml-24">
                                 <h1 className="text-purple-600 text-xl font-medium tracking-[0.030rem]"> Useful Links </h1>
@@ -65,13 +121,16 @@ const Footer = () => {
                             <div className="leading-9 md:w-3/4 md:order-4">
                                 <h1 className="text-purple-600 text-xl font-medium tracking-[0.030rem]"> Our Services </h1>
                                 <ul className="mt-2 text-gray-500 font-medium">
-                                    <li>
-                                        <i className="fa fa-chevron-right text-purple-600"></i>
-                                        <Link href="#" className="hover:text-purple-600">
-                                            Full-stack Development
-                                        </Link>
-                                    </li>
-                                    <li>
+                                    {service.map((e) => {
+                                        return (
+                                            <li key={e.uid}>
+                                                <i className="fa fa-chevron-right text-purple-600"></i>
+                                                <Link href="#" className="hover:text-purple-600">
+                                                    {e.title}
+                                                </Link>
+                                            </li>)
+                                    })}
+                                    {/* <li>
                                         <i className="fa fa-chevron-right text-purple-600"></i>
                                         <Link href="#" className="hover:text-purple-600">
                                             Backend Development
@@ -94,7 +153,7 @@ const Footer = () => {
                                         <Link href="#" className="hover:text-purple-600">
                                             Frontend Development
                                         </Link>
-                                    </li>
+                                    </li> */}
                                 </ul>
                             </div>
                             <div className="md:order-2 lg:order-last">
@@ -102,11 +161,15 @@ const Footer = () => {
                                 <p className="text-gray-500 font-medium w-3/5 leading-7 mb-5 md:w-3/4"> Join our newsletter and never
                                     miss out any updates, discounts and offers.
                                 </p>
-                                <input type="email"
-                                    placeholder="Enter E-mail Here"
-                                    className="py-1 px-2 placeholder-gray-400 rounded-tl-xl focus: outline-none focus:bordermd:w-1/2 lg:w-3/5 border" />
-                                <button className="text-white bg-purple-600 p-1 -translate-x-1 rounded-br-xl hover:bg-purple-500"> Subscribe
-                                </button>
+                                <form onSubmit={handleSubmit}>
+                                    <input type="email"
+                                        placeholder="Enter E-mail Here"
+                                        className="py-1 px-2 placeholder-gray-400 rounded-tl-xl focus: outline-none focus:bordermd:w-1/2 lg:w-3/5 border"
+                                        name='email' onChange={handleChange}
+                                        />
+                                    <button type='submit' className="text-white bg-purple-600 p-1 -translate-x-1 rounded-br-xl hover:bg-purple-500"> Subscribe
+                                    </button>
+                                </form>
                             </div>
                         </div>
                     </div>

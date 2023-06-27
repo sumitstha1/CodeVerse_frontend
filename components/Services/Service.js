@@ -4,14 +4,14 @@ import Image from 'next/image';
 import { BsArrowRight } from 'react-icons/bs'
 import ServiceSection from '../../components/Services/ServiceSection';
 
-const Service = () => {
+const Service = ({ services }) => {
     return (
         <section className="text-gray-600 body-font">
             <h1 className='text-4xl text-purple-600 tracking-wider font-bold px-5 text-center'>Services</h1>
             <p className='tracking-wide text-center mt-4'>We create stunning, user-friendly websites tailored to your business needs.</p>
             <div className="container px-5 py-16 mx-auto flex flex-wrap">
                 <div className='flex justify-center flex-col md:items-center'>
-                    <ServiceSection />
+                    <ServiceSection services={services} />
 
                     <div className='w-full flex justify-center items-center'>
                         <Link

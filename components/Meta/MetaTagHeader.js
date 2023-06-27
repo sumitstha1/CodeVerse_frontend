@@ -6,17 +6,17 @@ export default function MetaHead(props) {
     return (
         <Head>
 
-            <title>{title} - CodeVerse | Your Website Development Partner</title>
+            <title>{title}</title>
 
-            <meta name="title" content={`${title} - CodeVerse | Your Website Development Partner`} />
+            <meta name="title" content={title} />
             <meta name="description" content={meta_description} />
             <meta name="author" content={meta_author} />
             <meta name="keywords" content={meta_keyword} />
 
             {/* facebook og tags */}
-            <meta property="og:url" content={process.env.NEXT_PUBLIC_URL} />
+            <meta property="og:url" content={process.env.WEB_URL} />
             <meta property="og:type" content="website" />
-            <meta property="og:title" content={meta_title + "- CodeVerse | Your Website Development Partner"} />
+            <meta property="og:title" content={meta_title} />
             <meta property="og:description" content={meta_description} />
             <meta property="og:image" content={meta_image} />
 
@@ -24,7 +24,7 @@ export default function MetaHead(props) {
             <meta name="twitter:card" content="summary" />
             <meta name="twitter:site" content="@sumit" />
             <meta name="twitter:creator" content="@sumit" />
-            <meta property="twitter:title" content={meta_title + "- CodeVerse | Your Website Development Partner"} />
+            <meta property="twitter:title" content={meta_title} />
             <meta property="twitter:description" content={meta_description} />
             <meta name="twitter:image" content={meta_image} />
         </Head>

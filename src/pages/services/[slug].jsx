@@ -2,34 +2,44 @@ import React from 'react'
 import Image from 'next/image'
 import { Typography } from '@mui/material'
 import { useRouter } from 'next/router'
+import MetaHead from '../../../components/Meta/MetaTagHeader'
+import ServiceContent from '../../../components/Services/ServiceContent'
 
-const ServiceSlug = () => {
+const ServiceSlug = ({ service }) => {
 
   const router = useRouter();
 
   const { slug } = router.query;
 
-  console.log(slug)
+  console.log(service.meta)
 
   return (
     <>
-      <section>
+      <MetaHead
+        title={service.title}
+        meta_author={"CodeVerse"}
+        meta_keyword={service.meta && service.meta.keywords}
+        meta_title={service.title}
+        meta_description={"Learn about CodeVerse, a leading web development company focused on delivering innovative and customized solutions. Discover our mission, values, and the expertise of our dedicated team."}
+        meta_image={'/programmer_solo.jpg'}
+      />
+      <section className='h-[50vh]'>
         <div className='w-full h-[50vh]'>
-          <Image src={"/scene.jpg"} width={3000} height={2000} alt='Banner Image' className='h-full' />
+          <Image src={process.env.WEB_URL + service.banner_image} width={3000} height={2000} alt='Banner Image' className='h-full bg-blend-darken mix-blend-darken' />
         </div>
-        <div className='relative -top-32 md:left-10 text-slate-200 max-w-[100vw] w-full'>
-          <p className='md:text-xl text-base w-full'>This is a banner title</p>
-          <h1 className='md:text-4xl text-2xl'>This is a banner description and now its time to test</h1>
+        <div className='relative md:-top-32 -top-48 md:left-10 text-slate-200 max-w-[100vw] w-full'>
+          <p className='md:text-xl text-base w-full'>{service.title}</p>
+          <h1 className='md:text-4xl text-2xl'>{service.title_quote}</h1>
         </div>
       </section>
       <section>
         <div className='md:px-24 px-8 py-12 md:mx-28'>
           <div className='flex flex-col justify-center items-center'>
-            <h1 className='md:text-3xl text-2xl text-purple-500 font-semibold'>Hosting / Deployment</h1>
-            <p className='font-thin text-gray-500'>This is the quote for title</p>
+            <h1 className='md:text-3xl text-2xl text-purple-500 font-semibold'>{service.title}</h1>
+            <p className='font-thin text-gray-500 italic text-center'>&quot;{service.title_quote}&quot;</p>
           </div>
           <div className='mt-10'>
-            <p className='leading-7 tracking-wide'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis error tempora alias nulla eligendi sint nostrum eveniet iusto eaque rem ullam ab laudantium quos iste, molestias provident! At, facilis facere. Quaerat amet labore necessitatibus, nam repellat voluptate molestiae non repellendus fugit porro ad, at dolor. Est accusantium mollitia eaque commodi amet ut velit, quasi temporibus ipsam molestiae voluptate asperiores, quisquam veritatis qui, consequatur necessitatibus? Sunt sint iste sapiente labore at aut assumenda molestiae voluptate quae accusantium quo totam veniam voluptatum eligendi earum, quidem tempore cupiditate facilis reprehenderit non nihil placeat cum rem! Veritatis, laudantium. Ullam temporibus ipsum explicabo saepe harum. Iure aut repellendus odio facilis mollitia adipisci ut officiis. Tempore autem inventore suscipit nemo aliquid, quos aliquam mollitia asperiores laborum iusto consectetur quibusdam, odit eius explicabo, accusamus rerum officiis alias consequuntur. Nemo, culpa fugit temporibus ea ratione impedit aperiam vero, dolorem consectetur obcaecati sequi reiciendis! Officiis in, nemo ratione, dolor, quaerat ullam natus hic excepturi vitae nesciunt explicabo reiciendis aliquid? A deleniti assumenda illo aperiam consequuntur odio in, dolores fugiat aspernatur neque maiores eius cupiditate ducimus est ipsam mollitia perferendis, provident, explicabo qui tempore quae porro corrupti repellat officia! Impedit ab dolore, fugiat dolorum maxime at voluptatem voluptatibus sapiente, velit vel incidunt autem. Saepe quas voluptatem, officiis magni architecto laudantium, nulla beatae fugiat et doloribus cumque dolor! Suscipit dolorem sit hic quo, provident fuga iure soluta quam quidem illo officiis minus eum, aspernatur fugiat delectus amet! Dolore ducimus aut ipsum doloremque labore quisquam asperiores vero, esse tempore repellendus beatae soluta praesentium ad magnam, saepe adipisci veniam nam corrupti inventore minima. Asperiores odio quam iusto eaque hic voluptatibus, quod assumenda porro nemo consectetur fugit nam earum! Pariatur placeat commodi esse adipisci similique? Quam voluptatum eligendi assumenda consectetur! Tempore reiciendis dolores porro magnam numquam sit similique voluptate minima provident, aut repellat adipisci iure natus animi ab ex in, a corrupti! Atque, nostrum optio. Iusto amet illum illo nobis quae consequatur mollitia enim suscipit repellat magni eum, quo ab. Temporibus laudantium omnis est alias consequuntur dicta aliquam nisi dolore placeat? Ipsam deleniti dolores quia fuga vero dolore sunt facere maiores at! Nobis praesentium, perferendis explicabo accusamus aperiam est facere itaque optio a, quam facilis placeat quaerat cum voluptate tenetur eligendi maxime voluptatibus id vel, ad sit numquam voluptatum eos possimus? Hic at repellat enim incidunt quia magnam laboriosam cum quidem corrupti similique, impedit ipsum consequatur dolorem autem repudiandae obcaecati nostrum amet rerum quasi dicta omnis, optio, voluptatum dignissimos. Pariatur architecto iusto, quae perspiciatis, in illo nihil ea iste voluptatibus ipsum iure obcaecati eos, et reiciendis debitis necessitatibus. Odio quis quasi harum velit repudiandae cum neque commodi voluptate eaque hic deserunt reprehenderit expedita porro, molestiae optio ea accusamus corporis incidunt quidem a suscipit ullam. Adipisci natus voluptas minima nisi, nihil iure fuga at voluptatum! Explicabo consequatur quam voluptates ipsa consequuntur, aperiam corporis amet soluta ipsam. Itaque sit nesciunt totam error quibusdam similique maxime aperiam. Soluta perferendis accusamus, iure reprehenderit voluptatibus distinctio velit fugit quo adipisci maiores? Ea eligendi cum possimus dolor! Ipsum ducimus enim autem! Tenetur nostrum iste laboriosam a aliquid ex quibusdam itaque tempore deserunt porro, voluptates dolore asperiores blanditiis molestiae corrupti odit maiores temporibus veritatis necessitatibus ipsa illo optio quis consequuntur hic? Omnis ad totam eius eligendi repellendus magni tenetur ipsam aspernatur quod itaque illo, aliquid esse provident qui. Adipisci nostrum id odit, modi provident quia minus pariatur autem veritatis illum tempora aut in, porro error cum sed soluta nobis ea earum vitae deserunt debitis impedit? Assumenda dolor, quas debitis amet velit quis excepturi laborum temporibus ea repellat dignissimos? Possimus dolore delectus, perspiciatis nisi reprehenderit mollitia, nobis quaerat rerum voluptatibus architecto assumenda libero odit ipsum adipisci illo ipsa. Eveniet unde, nam illum facilis iste nobis hic veritatis autem iusto eius impedit distinctio laudantium quasi explicabo aperiam odit rerum molestiae. Eligendi soluta id dolorem expedita laudantium optio? Reprehenderit, magnam iure qui, aspernatur modi iusto architecto omnis alias harum officiis perspiciatis ratione officia dignissimos expedita! Exercitationem pariatur enim dolores quam voluptates vitae, repellendus corporis minima voluptas beatae a rem ipsum sunt voluptate nihil optio. Aliquam odio pariatur magnam minima odit natus ipsam earum nisi voluptates tempora dicta recusandae nostrum cumque eius repudiandae autem iste aspernatur, impedit, obcaecati accusantium distinctio commodi molestiae! Ab tempore laudantium nulla dolore dolorum est, magni officiis consequuntur cumque magnam illo distinctio. Dolorum, libero amet quaerat, itaque modi, neque autem quod aspernatur nesciunt beatae blanditiis fugiat reprehenderit esse aperiam eos iste. Ad, iusto voluptate exercitationem illum illo esse deserunt laborum id voluptas aliquid soluta ullam? Cum alias ullam repellat fugiat suscipit nemo debitis amet? Praesentium natus quaerat animi molestias! Porro quae quia repellat reprehenderit nostrum molestiae sunt quidem odit amet, recusandae fugit soluta beatae fugiat eligendi. Ratione ut quas aut similique nihil dolorum totam labore quo aperiam tenetur molestias quisquam nam, commodi a recusandae reiciendis in culpa ducimus! Cum doloribus eveniet eaque corporis accusamus, assumenda, perspiciatis nemo laboriosam odit architecto reiciendis magni fugiat tenetur consectetur, facere numquam distinctio. Esse maiores impedit, officia labore iure ad cumque rerum vel libero enim placeat! Iste voluptatem sed obcaecati aliquid veritatis suscipit neque nihil perspiciatis. Dolorem reiciendis suscipit cupiditate quo illum alias asperiores perferendis architecto! Laboriosam, numquam tempore harum placeat quod eveniet est, iste nostrum ipsum inventore consequuntur, suscipit obcaecati? Nesciunt error, velit quam obcaecati ipsam delectus accusantium ab nam architecto eveniet dolor repudiandae in ad, omnis animi rem hic impedit, molestiae ducimus atque earum sequi. Natus ab repudiandae quo, modi atque aperiam laborum. Laboriosam quis, dicta fugit aliquid, earum voluptatem expedita quaerat et repellat quidem dolor veniam quae quo aperiam modi ab alias sed aspernatur soluta perferendis! Neque cupiditate saepe soluta ab, earum totam nulla tempore enim sint. Dolorem eos odit aperiam saepe, distinctio impedit quisquam officia accusamus animi beatae unde optio commodi aliquid quia laborum praesentium in sed ad, reiciendis libero totam ab consequuntur! Velit itaque voluptas adipisci nobis libero aspernatur iusto tenetur quibusdam ipsam sint ab quo, illum sunt ad voluptatum officia, doloribus sit eos molestiae? Velit sequi iusto, tenetur eveniet consectetur illo neque non magni. Odio, aliquid eveniet? Ea, quasi harum!</p>
+            <ServiceContent description={service.description} />
           </div>
         </div>
       </section>
@@ -38,3 +48,30 @@ const ServiceSlug = () => {
 }
 
 export default ServiceSlug
+
+export const getStaticProps = async ({ params }) => {
+  const response = await fetch(process.env.API_URL + `/service/${params.slug}`);
+  const service = await response.json();
+
+  return {
+    props: {
+      service,
+    },
+  };
+};
+
+export const getStaticPaths = async () => {
+  // Fetch the list of services to generate dynamic paths
+  const response = await fetch(process.env.API_URL + '/service/');
+  const services = await response.json();
+
+  // Generate an array of paths based on the services' slugs
+  const paths = services.map((service) => ({
+    params: { slug: service.slug },
+  }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
