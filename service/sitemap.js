@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Define your website's base URL
-const baseURL = 'http://localhost:3000';
+const baseURL = 'https://codeversenepal.com';
 
 // Define your website's routes
 const routes = [
@@ -13,6 +13,11 @@ const routes = [
   '/services',
   '/portfolio',
   '/blogs',
+  "/services/full-stack-development",
+  "/services/front-end-development",
+  "/services/back-end-development",
+  "/services/api-development",
+  "/services/deployment-hosting"
   // Add more routes as needed
 ];
 
@@ -25,7 +30,7 @@ async function generateSitemap() {
 
   // Add each route to the sitemap
   routes.forEach((route) => {
-    sitemapStream.write({ url: route, changefreq: 'weekly', priority: 0.7 });
+    sitemapStream.write({ url: route, changefreq: 'weekly', priority: 0.5 });
   });
 
   // End the stream
