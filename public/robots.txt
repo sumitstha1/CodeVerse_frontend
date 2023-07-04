@@ -1,0 +1,19 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /backup/
+Disallow: /cache/
+Disallow: /includes/
+Disallow: /libs/
+Disallow: /logs/
+Disallow: /modules/
+Disallow: /plugins/
+Disallow: /scripts/
+Disallow: /temp/
+Disallow: /uploads/
+
+Sitemap: https://codeversenepal.com/sitemap.xml
+
+Host: https://codeversenepal.com/
