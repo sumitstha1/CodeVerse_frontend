@@ -19,3 +19,7 @@ body {
     background-size: cover;
     background-position: center;
 }
+
+.blog-container {
+    box-shadow: 0 0 10px 3px hsla(0,0%,74%,.35);
+}

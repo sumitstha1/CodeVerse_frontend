@@ -2,14 +2,9 @@ import React from 'react'
 import SingleBlogSection from '../../../components/Blogs/SingleBlogSection'
 import { useRouter } from 'next/router'
 import MetaHead from '../../../components/Meta/MetaTagHeader';
+import RecentBlogs from '../../../components/Blogs/RecentBlogs';
 
-const BlogSlug = ({ blog }) => {
-
-  const router = useRouter();
-
-  const { slug } = router.query;
-
-  console.log(blog.meta.title)
+const BlogSlug = ({ blog, blogs, slug }) => {
   return (
     <>
       <MetaHead
@@ -21,6 +16,7 @@ const BlogSlug = ({ blog }) => {
         meta_image={'/code.jpg'}
       />
       <SingleBlogSection blog={blog} />
+      <RecentBlogs blogs={blogs} slug = {slug} />
     </>
   )
 }
@@ -31,15 +27,19 @@ export async function getServerSideProps(context) {
 
   const { slug } = context.params;
 
-  console.log(slug)
+  // console.log(slug)
 
   try {
     const blog_d = await fetch(`${process.env.API_URL}/blog/${slug}/`);
     const blog = await blog_d.json();
+    const blogs_d = await fetch(`${process.env.API_URL}/blog/`);
+    const blogs = await blogs_d.json();
 
     return {
       props: {
         blog: blog,
+        blogs: blogs,
+        slug: slug,
       },
       notFound: false,
     };
@@ -48,7 +48,8 @@ export async function getServerSideProps(context) {
   catch (error) {
     return {
       props: {
-        blog: [],
+        blog: {},
+        blogs: [],
       }
     }
   }
