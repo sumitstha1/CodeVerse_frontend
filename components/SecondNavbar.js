@@ -16,7 +16,7 @@ const SecondNavbar = () => {
                     <Link href={"/"} className="md:mx-7 mr-4 md:text-lg text-base hover:text-purple-500 transition ease-in duration-100">Home</Link>
                     <Link href={"/about"} className="md:mx-7 mr-4 md:text-lg text-base hover:text-purple-500 transition ease-in duration-100">About us</Link>
                     <Link href={"/services"} className="md:mx-7 mr-4 md:text-lg text-base hover:text-purple-500 transition ease-in duration-100">Services</Link>
-                    <Link href={"/portfolio"} className="md:mx-7 mr-4 md:text-lg text-base hover:text-purple-500 transition ease-in duration-100">Portfolio</Link>
+                    {/* <Link href={"/portfolio"} className="md:mx-7 mr-4 md:text-lg text-base hover:text-purple-500 transition ease-in duration-100">Portfolio</Link> */}
                     <Link href={"/blog"} className="md:mx-7 mr-4 md:text-lg text-base hover:text-purple-500 transition ease-in duration-100">Blogs</Link>
                 </nav>
                 <button onClick={() => router.push("/contact")} className="inline-flex items-center md:text-lg text-base border-0 py-2 px-3 focus:outline-none rounded text-white hover:text-purple-200 mt-4 md:mt-0 md:mr-12 bg-gradient-to-tl from-purple-500 to-teal-500 transition ease-in duration-100 delay-75">Contact us</button>

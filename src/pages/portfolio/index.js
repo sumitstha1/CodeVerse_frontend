@@ -1,10 +1,13 @@
 import React from 'react'
+import PortfolioSection from '../../../components/Portfolio/PortfolioSection'
+import UnderMaintenance from '../../../components/Utils/UnderMaintenance'
 
 const Portfolio = () => {
   return (
-    <div>
-      Portfolio
-    </div>
+    <>
+    <UnderMaintenance />
+    {/* <PortfolioSection /> */}
+    </>
   )
 }
 

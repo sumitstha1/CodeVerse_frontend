@@ -11,7 +11,7 @@ const ServiceSlug = ({ service }) => {
 
   const { slug } = router.query;
 
-  console.log(service.meta)
+  // console.log(service.meta)
 
   return (
     <>
