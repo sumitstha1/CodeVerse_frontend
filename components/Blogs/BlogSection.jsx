@@ -8,14 +8,14 @@ const BlogSection = ({ blogList }) => {
             <div className='flex justify-center items-center w-full'>
                 <div className='w-[90%]'>
                     <h1 className='text-4xl tracking-wider text-purple-500'>Blogs</h1>
-                    <p className='text-base text-gray-500 mt-3'>This is a short description about the blog</p>
+                    <p className='text-base text-gray-500 mt-3'>Learn with us...</p>
                 </div>
             </div>
-            <div className='flex items-center flex-col md:flex-row md:mx-10 md:max-w-[100vw] md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3'>
+            <div className='flex items-center md:max-h-full flex-col md:flex-row md:mx-10 md:max-w-[100vw] md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3'>
                 {blogList.map((e) => {
                     // console.log(process.env.WEB_URL + e.image)
                     return (
-                        <div key={e.uid} className='w-[95%] my-5 md:w-full md:mx-2 flex-wrap'>
+                        <div key={e.uid} className='w-[95%] my-5 md:w-full md:h-full md:mx-2 flex-wrap'>
                             <div class="relative p-2 ">
                                 <div class="overflow-hidden rounded">
                                     <Image src={`${e.image}`} alt='This is blog pic' height={4024} width={6024} className='rounded w-full h-[40vh] transform transition-transform ease-in-out duration-1000 hover:scale-110' />

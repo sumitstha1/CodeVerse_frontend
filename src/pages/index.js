@@ -13,7 +13,7 @@ import TermsAndConditions from '../../components/TermsandConditions';
 
 export default function Home({ profile, service }) {
 
-  console.log(profile)
+  // console.log(profile)
 
   return (
     <>
