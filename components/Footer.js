@@ -125,7 +125,7 @@ const Footer = () => {
                                         return (
                                             <li key={e.uid}>
                                                 <i className="fa fa-chevron-right text-purple-600"></i>
-                                                <Link href="#" className="hover:text-purple-600">
+                                                <Link href={`/services/${e.slug}`} className="hover:text-purple-600">
                                                     {e.title}
                                                 </Link>
                                             </li>)
@@ -180,20 +180,20 @@ const Footer = () => {
                     <p>Copyright &copy; 2023 <Link href={"/"} className='hover:text-purple-300'>CodeVerse</Link>. All Rights Reserved.</p>
                 </div>
                 <div className="md:flex flex-row justify-end items-center mr-20 mx-3 hidden text-white pb-4 text-center text-xl space-x-2 md:w-2/4 md:pb-0 md:pl-2 md:space-x-1 lg:pl-[171px] lg:space-x-2 xl:pl-44">
-                    <Link href="#" className="w-8 h-8 bg-purple-500 hover:text-purple-500 flex flex-col rounded-full pt-[3px] hover:bg-gray-200 justify-center items-center">
+                    <Link href="viber://chat/?number=%2B9779815980798" className="w-8 h-8 bg-purple-500 hover:text-purple-500 flex flex-col rounded-full pt-[3px] hover:bg-gray-200 justify-center items-center">
                         <FaViber />
                     </Link>
-                    <Link href="#" className="w-8 h-8 bg-purple-500 hover:text-purple-500 flex flex-col rounded-full pt-[3px] hover:bg-gray-200 justify-center items-center">
+                    <Link href="https://www.facebook.com/codeverse.np" className="w-8 h-8 bg-purple-500 hover:text-purple-500 flex flex-col rounded-full pt-[3px] hover:bg-gray-200 justify-center items-center">
                         <FaFacebookF />
                     </Link>
-                    <Link href="#" className="w-8 h-8 bg-purple-500 hover:text-purple-500 flex flex-col rounded-full pt-[3px] hover:bg-gray-200 justify-center items-center">
+                    <Link href="https://m.me/codeverse.np" className="w-8 h-8 bg-purple-500 hover:text-purple-500 flex flex-col rounded-full pt-[3px] hover:bg-gray-200 justify-center items-center">
                         <FaFacebookMessenger />
                     </Link>
-                    <Link href="#"
+                    <Link href="https://instagram.com/codeverse.np/"
                         className="w-8 h-8 bg-purple-500 hover:text-purple-500 flex flex-col rounded-full pt-[3px] hover:bg-gray-200 justify-center items-center">
                         <FaInstagram />
                     </Link>
-                    <Link href="#"
+                    <Link href="mailto:web.codeverse@gmail.com"
                         className="w-8 h-8 bg-purple-500 hover:text-purple-500 flex flex-col rounded-full pt-[3px] hover:bg-gray-200 justify-center items-center">
                         <AiOutlineMail />
                     </Link>

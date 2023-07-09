@@ -25,7 +25,7 @@ const ServiceSlug = ({ service }) => {
       />
       <section className='h-[50vh]'>
         <div className='w-full h-[50vh]'>
-          <Image src={process.env.WEB_URL + service.banner_image} width={3000} height={2000} alt='Banner Image' className='h-full bg-blend-darken mix-blend-darken' />
+          <Image src={service.banner_image} width={3000} height={2000} alt='Banner Image' className='h-full bg-blend-darken mix-blend-darken' />
         </div>
         <div className='relative md:-top-32 -top-48 md:left-10 text-slate-200 max-w-[100vw] w-full'>
           <p className='md:text-xl text-base w-full'>{service.title}</p>
