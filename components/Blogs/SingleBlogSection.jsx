@@ -7,7 +7,8 @@ const SingleBlogSection = ({ blog }) => {
     .replace(/<h1>/g, '<h1 class="text-3xl">')
     .replace(/<h2>/g, '<h2 class="text-2xl font-semibold">')
     .replace(/<h3>/g, '<h3 class="text-xl">')
-    .replace(/<p>/g, '<p class="text-lg">');
+    .replace(/<p>/g, '<p class="text-lg">')
+    .replace(/<ol>/g, '<ol class="list-decimal">');
 
   return (
     <div className='md:flex justify-center md:my-4'>
