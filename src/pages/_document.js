@@ -5,6 +5,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
+      <link rel="icon" type="image/x-icon" href="/code_verse_transparent.png" />
       <body className='selection:text-white selection:bg-purple-400'>
         {/* <div id="fb-root"></div>
 
