@@ -6,7 +6,7 @@ import FirstNavbar from '../../components/FirstNavbar'
 import Footer from '../../components/Footer'
 import Testimonial from '../../components/TestimonialSection'
 import NextNProgress from 'nextjs-progressbar';
-import MessengerPlugin from '../../components/MessengerPlugin'
+import MessengerPlugin from '../../components/MessengerPlugin';
 
 export default function App({ Component, pageProps }) {
   return <>
@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }) {
     {/* <Testimonial/> */}
     <Footer />
     <ToastContainer/>
-    {/* <MessengerPlugin/> */}
+    <MessengerPlugin />
 
   </>
 }
