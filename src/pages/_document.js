@@ -5,6 +5,18 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LF4E49299R"></script>
+      <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-LF4E49299R');
+            `,
+          }}
+          />
       <link rel="icon" type="image/x-icon" href="/code_verse_transparent.png" />
       <body className='selection:text-white selection:bg-purple-400'>
         {/* <div id="fb-root"></div>
@@ -20,28 +32,8 @@ export default function Document() {
             chatbox.setAttribute("page_id", "101348906341916");
             chatbox.setAttribute("attribution", "biz_inbox");`,
           }}
-        ></Script>
-
-        <Script
-          id="messenger-sdk"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `window.fbAsyncInit = function() {
-            FB.init({
-              xfbml: true,
-              version: 'v17.0'
-            });
-      };
-
-          (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-          fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));`,
-          }}
         ></Script> */}
+
         <Main />
         <NextScript />
 

@@ -2,6 +2,7 @@ import React from 'react'
 import ContactBanner from '../../../components/Contact/ContactBanner'
 import ContactSection from '../../../components/Contact/ContactSection'
 import MetaHead from '../../../components/Meta/MetaTagHeader'
+import Head from 'next/head'
 
 const index = () => {
   return (
@@ -14,6 +15,9 @@ const index = () => {
     meta_description={"Contact CodeVerse to unleash the full potential of your business. We offer professional web development, digital marketing, and hosting services in Nepal. Get in touch today for a consultation."}
     meta_image={'/code.jpg'}
     />
+    <Head>
+      <link rel="canonical" href="https://www.codeversenepal.com/contact" />
+    </Head>
     <ContactBanner/>
     <ContactSection/>
     
