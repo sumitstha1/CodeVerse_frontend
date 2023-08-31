@@ -1,0 +1,32 @@
+.recentBlog {
+    display: grid;
+    grid-template-rows: 2;
+    row-gap: 1rem;
+    width: 90%;
+    margin: auto;
+    padding: 0 0.75rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    padding-top: 0.75rem;
+}
+
+.recentBlog .recentHeading {
+    grid-row: 1;
+}
+
+.recentBlog .blogList {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 0.725rem;
+}
+
+.recentBlog .blogList .blogCard {
+    border-radius: 1.5rem;
+    min-height: 32.625rem;
+    background: #000;
+}
+
+.recentBlog .blogList .blogCard .blogImage {
+    object-fit: cover;
+}

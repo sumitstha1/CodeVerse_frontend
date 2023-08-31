@@ -3,7 +3,7 @@ import SingleBlogSection from '../../../components/Blogs/SingleBlogSection'
 import { useRouter } from 'next/router'
 import MetaHead from '../../../components/Meta/MetaTagHeader';
 import RecentBlogs from '../../../components/Blogs/RecentBlogs';
-
+import RecentBlog from '../../../components/Blogs/RecentBlog';
 const BlogSlug = ({ blog, blogs, slug }) => {
   return (
     <>
@@ -16,7 +16,7 @@ const BlogSlug = ({ blog, blogs, slug }) => {
         meta_image={'/code.jpg'}
       />
       <SingleBlogSection blog={blog} />
-      <RecentBlogs blogs={blogs} slug = {slug} />
+      <RecentBlog />
     </>
   )
 }
