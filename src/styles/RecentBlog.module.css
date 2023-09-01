@@ -10,23 +10,45 @@
     padding-top: 0.75rem;
 }
 
-.recentBlog .recentHeading {
+.recentHeading {
     grid-row: 1;
 }
 
-.recentBlog .blogList {
+.blogList {
     grid-row: 2;
     display: grid;
     grid-template-columns: 1fr;
     column-gap: 0.725rem;
 }
 
-.recentBlog .blogList .blogCard {
-    border-radius: 1.5rem;
-    min-height: 32.625rem;
-    background: #000;
+.blogCard {
+    border-radius: 10px;
+    min-height: 20rem;
+    background: rgb(225, 225, 235);
+    height: 100%;
 }
 
-.recentBlog .blogList .blogCard .blogImage {
+.blogImage {
+    height: 50%;
+    width: 100%;
+}
+
+.blogImage img {
     object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.blogDetail {
+    height: 50%;
+    padding: 1rem .5rem;
+}
+
+.blogDesc {
+    margin: 1rem 0;
+}
+
+.blogLink {
+    display: flex;
+    align-items: end;
 }
