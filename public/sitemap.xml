@@ -4,71 +4,77 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
   <loc>https://www.codeversenepal.com/</loc>
-  <lastmod>2023-08-13T08:38:40+00:00</lastmod>
+  <lastmod>2023-09-01T09:14:18+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.codeversenepal.com/about</loc>
-  <lastmod>2023-08-13T08:38:40+00:00</lastmod>
+  <lastmod>2023-09-01T09:14:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.codeversenepal.com/services</loc>
-  <lastmod>2023-08-13T08:38:40+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.codeversenepal.com/blog</loc>
-  <lastmod>2023-08-13T08:38:40+00:00</lastmod>
+  <lastmod>2023-09-01T09:14:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.codeversenepal.com/portfolio</loc>
-  <lastmod>2023-08-13T08:38:40+00:00</lastmod>
+  <lastmod>2023-09-01T09:14:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.codeversenepal.com/blog</loc>
+  <lastmod>2023-09-01T09:14:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.codeversenepal.com/contact</loc>
-  <lastmod>2023-08-13T08:38:40+00:00</lastmod>
+  <lastmod>2023-09-01T09:14:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.codeversenepal.com/services/full-stack-development</loc>
-  <lastmod>2023-08-13T08:38:40+00:00</lastmod>
+  <lastmod>2023-09-01T09:14:18+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.codeversenepal.com/services/back-end-development</loc>
-  <lastmod>2023-08-13T08:38:40+00:00</lastmod>
+  <lastmod>2023-09-01T09:14:18+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.codeversenepal.com/services/front-end-development</loc>
-  <lastmod>2023-08-13T08:38:40+00:00</lastmod>
+  <lastmod>2023-09-01T09:14:18+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.codeversenepal.com/services/api-development</loc>
-  <lastmod>2023-08-13T08:38:40+00:00</lastmod>
+  <lastmod>2023-09-01T09:14:18+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.codeversenepal.com/services/deployment-hosting</loc>
-  <lastmod>2023-08-13T08:38:40+00:00</lastmod>
+  <lastmod>2023-09-01T09:14:18+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.codeversenepal.com/blog/the-future-of-web-development-trends-and-innovations</loc>
-  <lastmod>2023-08-13T08:38:40+00:00</lastmod>
+  <lastmod>2023-09-01T09:14:18+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.codeversenepal.com/blog/emerging-technologies-shaping-the-future-of-technology</loc>
-  <lastmod>2023-08-13T08:38:40+00:00</lastmod>
+  <lastmod>2023-09-01T09:14:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.codeversenepal.com/blog/artificial-intelligence-shaping-the-future-of-humanity</loc>
+  <lastmod>2023-09-01T09:14:18+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
