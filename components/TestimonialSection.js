@@ -9,6 +9,11 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+
 
 const TestomonialSection = ({ testomonials }) => {
 
@@ -81,54 +86,29 @@ const Testomonial = () => {
         // Add more testimonial objects as needed
       ];
 
-  // const [testomonials, setTestomonials] = useState([]);
-
-  // useEffect(() => {
-
-  //   const getTestimonials = async () => {
-  //     try {
-  //       await fetch('http://127.0.0.1:8000/api/v1/testimonial').then((a) => {
-  //         return a.json();
-  //       })
-  //         .then((parsed) => {
-  //           setTestomonials(parsed);
-
-  //         })
-
-  //     }
-  //     catch(error){
-  //       setTestomonials([])
-  //     }
-  //   }
-  //   getTestimonials();
-
-  // }, [])
+      const settings = {
+        dots: true, // Show pagination dots
+        infinite: true, // Enable infinite looping
+        speed: 500, // Transition speed in milliseconds
+        slidesToShow: 2, // Number of testimonials to show at once
+        slidesToScroll: 1, // Number of testimonials to scroll at once
+        autoplay: true, // Enable autoplay
+        autoplaySpeed: 5000, // Autoplay delay in milliseconds
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1, // Show 1 testimonial on smaller screens
+              dots: false,
+              arrows: false
+            },
+          },
+        ],
+      };
 
 
   return (
-    <Swiper
-      className="my-1"
-      // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
-      autoplay
-      slidesPerView={1}
-      loop={true}
-      keyboard
-      mousewheel
-      navigation={false}
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      // onSwiper={(swiper) => console.log(swiper)}
-      // onSlideChange={() => console.log("slide change")}
-      breakpoints={{
-        // responsive breakpoints
-        // when screen width is >= 640px, show 2 slides per view
-        640: {
-          slidesPerView: 2,
-        },
-      }}
-    >
+    <Slider {...settings}>
       {testimonials.map((t) => {
         return (
           <SwiperSlide key={t.id}>
@@ -151,7 +131,7 @@ const Testomonial = () => {
           // </SwiperSlide>
         );
       })}
-    </Swiper>
+    </Slider>
   );
 };
 

@@ -2,13 +2,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
-import TestimonialSection from '../../components/TestimonialSection'
 import ServicesSectionWrapper from '../../components/Home/ServicesSectionWrapper'
 import MetaHead from '../../components/Meta/MetaTagHeader'
 import HireMe from '../../components/Home/HireMe'
 import WhyCodeVerse from '../../components/Home/WhyCodeVerse'
 import { useState, useEffect } from 'react';
 import TermsAndConditions from '../../components/TermsandConditions';
+import Testimonial from '../../components/TestimonialSection';
+import TestimonialCard from '../../components/TestimonialSection';
 
 
 export default function Home({ profile, service }) {
@@ -54,7 +55,7 @@ export default function Home({ profile, service }) {
         <WhyCodeVerse content={profile.why_codeverse} />
         <ServicesSectionWrapper serviceList={service} />
         <HireMe />
-        {/* <TestimonialSection /> */}
+        <TestimonialCard />
         {/* <TermsAndConditions/> */}
       </main>
     </>

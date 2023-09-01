@@ -16,7 +16,7 @@ const BlogSlug = ({ blog, blogs, slug }) => {
         meta_image={'/code.jpg'}
       />
       <SingleBlogSection blog={blog} />
-      <RecentBlog />
+      <RecentBlogs blogs={blogs} slug={slug} />
     </>
   )
 }
