@@ -17,7 +17,8 @@ export default function Document() {
             `,
           }}
           />
-      <link rel="icon" type="image/x-icon" href="/code_verse_transparent.png" />
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       <body className='selection:text-white selection:bg-purple-400'>
         {/* <div id="fb-root"></div>
 

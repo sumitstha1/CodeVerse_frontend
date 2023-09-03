@@ -1,0 +1,5 @@
+<svg id="Group_1" data-name="Group 1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <circle id="Ellipse_1" data-name="Ellipse 1" cx="16" cy="16" r="16" fill="#fff"/>
+  <text id="C" transform="translate(4 25)" font-size="20" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">C</tspan></text>
+  <text id="V" transform="translate(16 25)" fill="#ffa31a" font-size="20" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">V</tspan></text>
+</svg>
